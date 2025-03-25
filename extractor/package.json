@@ -1,0 +1,28 @@
+{
+  "name": "woozy-extractor",
+  "version": "1.0.0",
+  "main": "extractor.js",
+  "scripts": {
+    "test": "node extractor.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Salies/woozy.git"
+  },
+  "author": "Daniel Serezane",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Salies/woozy/issues"
+  },
+  "homepage": "https://github.com/Salies/woozy#readme",
+  "description": "",
+  "dependencies": {
+    "@libsql/client": "^0.15.1",
+    "cloudinary": "^2.6.0",
+    "dotenv": "^16.4.7",
+    "mongodb": "6.15",
+    "patchright": "^1.50.1",
+    "puppeteer": "^24.4.0"
+  },
+  "type": "module"
+}
