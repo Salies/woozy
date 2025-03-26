@@ -18,6 +18,7 @@ const player = t.Object({
     name: t.String(),
     url_name: t.String(),
     price: t.Numeric(),
+    image_version: t.Numeric(),
     stats: stats,
 });
 
@@ -26,6 +27,7 @@ const team = t.Object({
     name: t.String(),
     url_name: t.String(),
     rank: t.Numeric(),
+    image_version: t.Numeric(),
     players: t.Array(player),
 });
 
@@ -40,6 +42,7 @@ const event = t.Object({
     id: t.Numeric(),
     name: t.String(),
     teams: t.Array(team),
+    image_version: t.Numeric(),
     created_at: t.Date(),
     updated_at: t.Date(),
 });

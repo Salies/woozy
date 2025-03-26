@@ -29,6 +29,9 @@ export const getEvent = async (id: number): Promise<Event> => {
             e.updated_at as updated_at,
             pte.price,
             pte.stats,
+            e.image_version AS event_image_version,
+            p.image_version AS player_image_version,
+            t.image_version AS team_image_version,
             ter.rank AS team_rank
         FROM player_team_event pte
         JOIN players p ON pte.player_id = p.id
@@ -42,6 +45,7 @@ export const getEvent = async (id: number): Promise<Event> => {
     const event: Event = {
         id: mainData[0].event_id as number,
         name: mainData[0].event_name as string,
+        image_version: mainData[0].event_image_version as number,
         created_at: new Date(mainData[0].created_at as string),
         updated_at: new Date(mainData[0].updated_at as string),
         teams: []
@@ -60,6 +64,7 @@ export const getEvent = async (id: number): Promise<Event> => {
                 id: teamId,
                 name: row.team_name as string,
                 url_name: row.team_url_name as string,
+                image_version: row.team_image_version as number,
                 rank: row.team_rank as number,
                 players: []
             };
@@ -75,6 +80,7 @@ export const getEvent = async (id: number): Promise<Event> => {
             id: row.player_id as number,
             name: row.player_name as string,
             url_name: row.player_url_name as string,
+            image_version: row.player_image_version as number,
             price: row.price as number,
             stats: playerStats
         };
