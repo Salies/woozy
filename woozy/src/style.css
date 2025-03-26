@@ -1,10 +1,12 @@
 /* global styles */
 main, header{
-    max-width: 640px;
+    max-width: 720px;
 }
 
 header {
     margin: 0 auto;
+    padding-right: var(--pico-spacing);
+    padding-left: var(--pico-spacing);
 }
 
 footer {

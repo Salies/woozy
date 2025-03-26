@@ -19,7 +19,7 @@ export function EventList() {
 }
 
 function EventCard(event: EventListItem) {
-    return <a href={`./events/${event.id}`} class="event-card-a">
+    return <a href={`./manager?event_id=${event.id}`} class="event-card-a">
         <article class="event-card">
             <img src={buildCloudinaryUrl(event.image_version, "events", event.id)} alt={event.name} />
             <hgroup>

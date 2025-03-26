@@ -1,0 +1,58 @@
+.event-image {
+    width: 50px;
+    height: 50px;
+}
+
+.event-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: var(--pico-typography-spacing-vertical);
+}
+
+.event-title h2 {
+    margin-bottom: 0;
+}
+
+.your-team-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.your-team-title button {
+    height:40px;
+    padding:0 0.5rem;
+    font-size:0.85rem;
+}
+
+.player {
+    background-color: var(--pico-secondary-background);
+    padding:0.5rem 0;
+    border-radius: var(--pico-border-radius);
+}
+
+.player > p {
+    text-align: center;
+    margin:0;
+    color: #fff!important;
+    font-size:0.85rem;
+}
+
+.img-wrapper {
+    position: relative;
+}
+
+.img-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%; /* Adjust to control shadow size */
+    background: linear-gradient(to top, rgb(82, 95, 122) 10%, rgba(82, 95, 122, 0) 100%);
+    pointer-events: none;
+}
+
+.player > p:first-of-type{
+    margin-bottom:-0.5rem;
+}

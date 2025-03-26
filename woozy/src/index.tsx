@@ -4,6 +4,7 @@ import { Header } from './components/Header.jsx';
 import { Footer } from './components/Footer.js';
 import { Home } from './pages/Home/index.jsx';
 import { EventList } from './pages/EventList/index.js';
+import { Manager } from './pages/Manager/index.js';
 import { NotFound } from './pages/_404.jsx';
 import './style.css';
 
@@ -15,6 +16,7 @@ export function App() {
 				<Router>
 					<Route path="/" component={Home} />
 					<Route path="/events" component={EventList} />
+					<Route path="/manager" component={Manager} />
 					<Route default component={NotFound} />
 				</Router>
 			</main>
