@@ -1,5 +1,4 @@
 import { Elysia } from "elysia";
-import { turso } from "./lib/turso";
 import { getAllEvents, getEvent } from "./lib/service";
 
 
@@ -8,10 +7,7 @@ if (!process.env.WOOZY_API_PORT) {
 }
 
 const app = new Elysia()
-  .get("/players", async () => {
-    const { rows } = await turso.execute("SELECT * FROM players");
-    return rows;
-  })
+  .get("/", () => "hello woozy")
   .get("/events", getAllEvents)
   .get("/events/:id", async (req) => {
     const id = parseInt(req.params.id);

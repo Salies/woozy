@@ -1,4 +1,4 @@
-import { Elysia, t } from "elysia";
+import { t } from "elysia";
 
 const stats = t.Object({
     rating: t.Numeric(),
@@ -40,8 +40,8 @@ const event = t.Object({
     id: t.Numeric(),
     name: t.String(),
     teams: t.Array(team),
-    created_at: t.String(),
-    updated_at: t.String(),
+    created_at: t.Date(),
+    updated_at: t.Date(),
 });
 
 const Validation = {
@@ -51,5 +51,8 @@ const Validation = {
 
 type Event = typeof event.static
 type EventSummary = typeof eventSummary.static
+type Team = typeof team.static
+type Player = typeof player.static
+type PlayerStats = typeof stats.static
 
-export { Validation, Event, EventSummary }
+export { Validation, Event, EventSummary, Team, Player, PlayerStats }
