@@ -38,8 +38,6 @@ export const getEvent = async (id: number): Promise<Event> => {
         WHERE pte.event_id = ?;
     `, [id]);
 
-    console.log(mainData[0]);
-
     // building event object from data
     const event: Event = {
         id: mainData[0].event_id as number,
