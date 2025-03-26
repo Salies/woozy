@@ -1,0 +1,9 @@
+/* global styles */
+footer{
+    position: absolute;
+    bottom: 0.25rem;
+    right: 0.5rem;
+    font-size: 0.5rem;
+    color: var(--pico-muted-color);
+    text-align: right;
+}

@@ -1,0 +1,16 @@
+/* home styles */
+.home{
+    text-align: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.home a{
+    text-decoration: none;
+}
+
+.home [role=group]{
+    margin-bottom:0;
+}
