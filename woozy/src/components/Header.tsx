@@ -1,18 +1,13 @@
 import { useLocation } from 'preact-iso';
 
 export function Header() {
-	const { url } = useLocation();
+	const { path } = useLocation();
+	if (path === '/') return null;
 
 	return (
 		<header>
-			<nav>
-				<a href="/" class={url == '/' && 'active'}>
-					Home
-				</a>
-				<a href="/404" class={url == '/404' && 'active'}>
-					404
-				</a>
-			</nav>
+			<h1>🐝 woozy</h1>
+			<hr />
 		</header>
 	);
 }

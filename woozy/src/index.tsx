@@ -9,8 +9,7 @@ import './style.css';
 export function App() {
 	return (
 		<LocationProvider>
-			{/* if is not home, show header */}
-			{location.pathname !== '/' && <Header />}
+			<Header />
 			<main class="container-fluid">
 				<Router>
 					<Route path="/" component={Home} />

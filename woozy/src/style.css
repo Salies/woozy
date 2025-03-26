@@ -1,9 +1,22 @@
 /* global styles */
-footer{
+main, header{
+    max-width: 900px;
+}
+
+header {
+    margin: 0 auto;
+}
+
+footer {
     position: absolute;
     bottom: 0.25rem;
     right: 0.5rem;
     font-size: 0.5rem;
     color: var(--pico-muted-color);
     text-align: right;
+}
+
+header > h1 {
+    text-align: left;
+    margin-top: 1rem;
 }
