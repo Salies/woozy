@@ -10,7 +10,7 @@ export function NotFound() {
 	const clownUrl = `https://www.hltv.org/player/${clown}`;
 
 	return (
-		<section>
+		<section style="text-align: center;">
 			<h1>404: Not Found</h1>
 			<p>no goats here, only <a href={clownUrl} target="_blank">washed clowns</a> 🤡</p>
 		</section>

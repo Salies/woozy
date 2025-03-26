@@ -1,0 +1,23 @@
+.event-card{
+    display: flex;
+}
+
+.event-card img {
+    width: 64px;
+    height: 64px;
+    margin-right:1rem;
+}
+
+.event-card time {
+    display: block;
+    font-size: 0.8rem!important;
+    color: #666;
+}
+
+.event-card hgroup {
+    margin-bottom: 0;
+}
+
+.event-card-a {
+    text-decoration: none;
+}
