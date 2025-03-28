@@ -4,15 +4,15 @@ import { readFileSync } from 'fs';
 
 dotenv.config()
 
-/*export const turso = createClient({
+const turso = createClient({
   url: process.env.TURSO_DATABASE_URL,
   authToken: process.env.TURSO_AUTH_TOKEN,
-});*/
+});
 
 // DEV: local db
-const turso = createClient({
+/*const turso = createClient({
     url: "file:local.db",
-});
+});*/
 
 // read json
 const jsonData = JSON.parse(readFileSync(`../${process.env.TARGET_ID}/event_data_hydra.json`, "utf8"));
