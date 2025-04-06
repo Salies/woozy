@@ -1,8 +1,0 @@
-node_modules
-config.js
-519
-package-lock.json
-local.db
-*.db-shm
-*.db-wal
-test.js

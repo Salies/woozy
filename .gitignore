@@ -135,8 +135,8 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# Bruno (testing)
-bruno
+# woozy
+data/
 
-# Prettier settings
-.prettierrc
+# bruno
+bruno/

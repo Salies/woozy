@@ -9,7 +9,9 @@
 	"dependencies": {
 		"preact": "^10.25.3",
 		"preact-iso": "^2.9.1",
-		"preact-render-to-string": "^6.5.13"
+		"preact-render-to-string": "^6.5.13",
+		"react-hot-toast": "^2.5.2",
+		"yalps": "^0.5.6"
 	},
 	"devDependencies": {
 		"@preact/preset-vite": "^2.9.3",

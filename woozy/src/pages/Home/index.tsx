@@ -19,6 +19,7 @@ export function Home() {
 	return (
 		<div class="home">
 			<hgroup>
+				<h2>🐝</h2>
 				<h2>woozy</h2>
 				<p>
 					the <a href={goatUrl} target="_blank" id="goat">🐐</a> fantasy

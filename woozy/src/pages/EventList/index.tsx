@@ -1,21 +1,30 @@
+import { useEffect, useState } from "preact/hooks";
 import { buildCloudinaryUrl } from "../../components/Cloudinary";
 import { EventListItem } from "../../dtos/Event";
 import "./style.css";
 
 export function EventList() {
-    const eventListData: EventListItem[] = [
-        {
-            id: 519,
-            name: "Playoffs - BLAST Open Lisbon 2025",
-            image_version: 1742963200,
-            created_at: "2025-03-25 20:06:24",
-            updated_at: "2025-03-25 20:06:24",
-        }
-    ];
+    const [eventListData, setEventListData] = useState<EventListItem[] | null>(null);
+
+    const api_url = import.meta.env.VITE_API_URL;
+
+    useEffect(() => {
+        fetch(`${api_url}/events`)
+            .then(res => res.json())
+            .then(setEventListData)
+            .catch(err => {
+                console.error("Failed to fetch events", err);
+                setEventListData([]);
+            });
+    }, []);
+
+    if (!eventListData) {
+        return <span aria-busy="true">Loading event list...</span>;
+    }
 
     return <div class="event-list">
-        {eventListData.map(event => <EventCard {...event} />)}
-    </div>
+        {eventListData.map(event => <EventCard key={event.id} {...event} />)}
+    </div>;
 }
 
 function EventCard(event: EventListItem) {
@@ -25,8 +34,8 @@ function EventCard(event: EventListItem) {
             <hgroup>
                 <h4>{event.name}</h4>
                 <time>Added in: {new Date(event.created_at).toLocaleString()}</time>
-                <time>Last upated: {new Date(event.updated_at).toLocaleString()}</time>
+                <time>Last updated: {new Date(event.updated_at).toLocaleString()}</time>
             </hgroup>
         </article>
-    </a>
+    </a>;
 }
