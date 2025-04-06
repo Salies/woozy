@@ -81,19 +81,19 @@
 
 /* icons */
 .player-stats {
-    background-image: url(img/bar-chart.svg);
+    background-image: url(../img/bar-chart.svg);
 }
 
 .player-unlock {
-    background-image: url(img/unlock.svg);
+    background-image: url(../img/unlock.svg);
 }
 
 .player-lock {
-    background-image: url(img/lock.svg);
+    background-image: url(../img/lock.svg);
 }
 
 .player-remove {
-    background-image: url(img/slash.svg);
+    background-image: url(../img/slash.svg);
 }
 
 .total-team-money{
