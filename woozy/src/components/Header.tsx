@@ -6,7 +6,7 @@ export function Header() {
 
 	return (
 		<header>
-			<h1><a href="./">🐝 woozy</a></h1>
+			<h1><a href="https://woozy.saliesbox.com/">🐝 woozy</a></h1>
 			<hr />
 		</header>
 	);
